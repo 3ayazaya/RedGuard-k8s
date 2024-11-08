@@ -56,3 +56,20 @@ docker buildx build --platform $BUILD_ARCHS --progress plain --pull -t <image:ta
 ```bash
 helm install redguard redguard -f redguard/values.yaml -n <namespace> --create-namespace
 ```
+### Helm
+1. Add a chart repository.
+```bash
+helm repo add shmel https://charts.shmel.xyz
+```
+
+2. Download `values.yaml` if need.
+
+```bash
+helm show values shmel/redguard > values.yaml
+```
+3. Change `values.yaml` if need.
+4. Install Helm-chart with RedGuard in k8s (k3s) cluster.
+
+```bash
+helm install redguard shmel/redguard -f values.yaml -n <namespace> --create-namespace
+```
