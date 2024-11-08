@@ -1,0 +1,6 @@
+apiVersion: v2
+name: redguard
+description: RedGuard is a C2 front flow control tool,Can avoid Blue Teams,AVs,EDRs check.
+type: application
+version: 0.1.0
+appVersion: "24.06.18"
